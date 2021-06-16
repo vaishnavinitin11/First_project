@@ -8,7 +8,7 @@
 body{
     font-family: "Merriweather", sans-serif;
     background-color: #ebf2ff;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .button__primary{
@@ -28,7 +28,7 @@ body{
 
 .navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -203,6 +203,7 @@ body{
 }
 
 @media (min-width: 1020px) {
+   
     .container {
         max-width: 900px;
     }
