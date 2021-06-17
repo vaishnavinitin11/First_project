@@ -20,6 +20,12 @@ body{
     cursor: pointer;
 }
 
+.button__primary:hover {
+    box-shadow: inset 300px 0 0 0 white;
+    border: 1px solid #d31027;
+    color: #d31027;
+  }
+
 .container{
     width: 100%;
     margin: 0 auto;
@@ -30,6 +36,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    
 }
 
 .navbar__brand {
@@ -42,14 +50,29 @@ body{
 
 .hero__container{
     width: 100%;
+
+  
 }
 
 .hero__image__container{
     width: 100%;
+    position: relative;
+
+}
+
+.hero__image__shape{
+    position: absolute;
+    right: 2;
 }
 
 .hero__image{
+    position: absolute;
     width: 100%;
+    right: auto;
+    left: auto;
+    z-index: 2;
+    border-radius: 6px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .hero__text{
@@ -105,7 +128,7 @@ body{
 .restaurants__flex__row__two{
     width: 100%;
     display: flex;
-    gap: 4px;
+    gap: 5px;
 }
 
 .restaurants__flex__row__one{
@@ -125,14 +148,107 @@ body{
 .restaurant__1, 
 .restaurant__4{
     width: 120%;
-    height: 150px;
+    height: 160px;
 }
 
 .restaurant__2, 
 .restaurant__3{
     width: 100%;
-    height: 200px;
+    height: 190px;
 }
+
+.email__container{
+    margin-top: 3rem;
+    width: 100%;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.email__input{
+    border: 1px solid #ee89a0;
+    background-color: #fcedf0;
+    color: #1d3557;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.email__text{
+    font-size: 30px;
+    color: #1d3557;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.email__input__field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.email__input::placeholder {
+    color: #bdbcbc;
+  }
+
+.quote__container{
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    border-radius: 13px;
+    background: url("https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80")
+    center center / cover no-repeat;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 30%;
+  }
+
+.quote__image__overlay{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    opacity: 49%;
+    border-radius: 13px;
+    background-color: #0a4065;
+}
+
+.quote__image__text{
+    color: #fff;
+    z-index: 3;
+    margin: 0 1rem;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer{
+    position: relative;
+    background-image: linear-gradient(to right, #ff512f 0%,#dd2476 51%, #ff512f 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 13px;
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-top: 20px;
+
+}
+
+ul.footer__list{
+    list-style-type: none;
+}
+
 
 
 @media (min-width: 768px){
@@ -200,6 +316,50 @@ body{
     .restaurants__flex{
         width: 100%;
     }
+    .email__container{
+        display: flex;
+        justify-content: center;
+    }
+    .email__input {
+        width: 20rem;
+    }
+    
+    .quote__container {
+        height: 200px;
+        width: 100%;
+    }
+    .quote_image_overlay {
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        border-radius: 13px;
+   
+        opacity: 49%;
+    }
+    .quote_image_text {
+        color: #fff;
+        z-index: 3;
+        margin: 0 1rem;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    footer {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    footer{
+        font-size: 18px;
+    }
+    .footer__heading{
+        font-size: 70px;
+    }
 }
 
 @media (min-width: 1020px) {
@@ -209,7 +369,7 @@ body{
     }
 
     .hero__text{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .exoplore__menu__lists{
@@ -222,11 +382,27 @@ body{
     .restaurants__container{
         margin-top: 30px;
     }
+    footer{
+        font-size: 20px;
+        
+    }
+    .footer__heading{
+        font-size: 70px;
+    }
 
 }
 
 @media (min-width: 1400px){
     .container{
         max-width: 1250px;
+    }
+    .quote_image_text{
+        font-size: 60px;
+    }
+    footer{
+        font-size: 25px;
+    }
+    .footer__heading{
+        font-size: 70px;
     }
 }
